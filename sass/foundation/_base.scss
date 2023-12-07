@@ -1,0 +1,31 @@
+@use "../mixin/mixin" as *;
+@use "../setting/color" as *;
+
+body {
+    background: $color-background;
+    overflow-x: hidden;
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-weight:500;
+    color: $color-text;
+}
+
+.wrapper {
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+section {
+    margin-top: 120px;
+}
+
+.inner {
+    max-width: 100%;
+    width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    @include mq('sp') {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

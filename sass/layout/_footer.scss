@@ -1,0 +1,83 @@
+@use '../mixin/mixin' as *;
+
+.footer {
+    background: #3E3E3E;
+    padding: 60px 0;
+
+}
+
+.footer__container {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    color: #fff;
+    @include mq('sp') {
+        display: block;
+        max-width: 960px;
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    @include mq('tab'){
+        justify-content: center;
+        padding: 0 40px;
+    }
+
+}
+
+.footer__sns {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    opacity: .6;
+
+    @include mq('pc'){
+        justify-content: left;
+    }
+
+    li {
+        &:nth-child(2) {
+            padding-left: 32px;
+        }
+    }
+}
+
+.footer__nav-list {
+    padding-top: 24px;
+
+    a {
+        color: #fff;
+    }
+}
+
+.footer__right {
+    margin-left: auto;
+}
+
+.footer-companyName {
+    font-size: 40px;
+    font-weight: bold;
+    color: #E3E3E3;
+    @include mq('sp'){
+        margin-top: 20px;
+    }
+}
+//page-top
+.page-top{
+    background: url(/img/totop.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: 100% auto;
+    position: fixed;
+    bottom: 10%;
+    right: 2%;
+    z-index: 5;
+}
+.footer__copyright {
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 12px;
+    text-align: right;
+    opacity: .6;
+}
